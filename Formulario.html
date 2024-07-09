@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="author" content="LGonzalez" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Eva 4 </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
+                    <div class="navbar-nav  ms-auto">
+                        <h5> Evaluación 4</h5>
+                        <a class="nav-link text-center">
+                            <h5><a class="custom-link" href="index.html"> Inicio</a></h5>
+                        </a> 
+                        <a class="nav-link text-center  " >
+                            <h5><a class="custom-link" href="Formulario.html"> Formulario </a></h5>
+                        </a>
+                        <a class="nav-link text-center">
+                            <h5><a class="custom-link" href="Listado.html"> Listado </a></h5>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <form class="login mt-5">
+            <header><h1>VENTA DE ARMAS</h1></header>
+            <div class="miContenedor">
+                <div id="mensajes"></div>
+                <div class="p-2">
+                    <div class="row align-items-end">
+                        <div class="col-md-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="txtrut" placeholder="" maxlength="12">
+                                <label for="txtrut">Rut</label>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary btn-lg misBotones" type="button" onclick="consultarCliente()">
+                                ... 
+                            </button>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="txtnom" placeholder="">
+                                <label for="txtnom">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="txtape" placeholder="">
+                                <label for="txtape">Apellido</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="txttel" placeholder=""/>
+                                <label for="txttel">Telefono</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="txtema" placeholder=""/>
+                                <label for="txtema">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="cbocom">
+                                    <option value="">SELECCIONE COMUNA SUCURSAL</option>
+                                    <option value="SAN FERNANDO">SAN FERNANDO</option>
+                                    <option value="RANCAGUA">RANCAGUA</option>
+                                    <option value="SANTIAGO">SANTIAGO</option>
+                                    <option value="SAN VICENTE DE TAGUA TAGUA">SAN VICENTE DE TAGUA TAGUA</option>
+                                    <option value="PEUMO">PEUMO</option>
+                                    <option value="LAS CABRAS">LAS CABRAS</option>
+                                </select>
+                                <label for="cbocom">COMUNA</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-4">
+                            <label class="form-check-label" for="opsexm"><strong>Sexo</strong></label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <input class="form-check-input" type="radio" name="opsex" id="opsexm" value="M" checked>
+                                    <label class="form-check-label" for="opsexm"><i>M</i></label>
+                                </div>
+                                <div class="col-4">
+                                    <input class="form-check-input" type="radio" name="opsex" id="opsexf" value="F">
+                                    <label class="form-check-label" for="opsexf"><i>F</i></label>
+                                </div>
+                                <div class="col-4">
+                                    <input class="form-check-input" type="radio" name="opsex" id="opsexx" value="X">
+                                    <label class="form-check-label" for="opsexx"><i>X</i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="txtmda" placeholder=""/>
+                                <label for="txtmda">MODELO DE ARMAS</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="txtpre" placeholder=""/>
+                                <label for="txtpre">Precio</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="cuo">
+                                    <option value="">Cuotas</option>
+                                    <option value="2">2</option>
+                                    <option value="4">4</option>
+                                    <option value="6">6</option>
+                                    <option value="8">8</option>
+                                    <option value="12">12</option>
+                                    <option value="16">16</option>
+                                </select>
+                                <label for="cuo">Cuotas</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-check-label" for="oppag"><strong>Pago</strong></label>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input class="form-check-input" type="radio" name="oppag" id="opcre" value="CREDITO" checked>
+                                    <label class="form-check-label" for="opcre"><i>CREDITO</i></label>
+                                </div>
+                                <div class="col-6">
+                                    <input class="form-check-input" type="radio" name="oppag" id="opdeb" value="DEBITO">
+                                    <label class="form-check-label" for="opdeb"><i>DEBITO</i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="mun">
+                                    <option value="">TIPO DE MUNICION</option>
+                                    <option value="POSTONES">POSTONES</option>
+                                    <option value="BALINES">BALINES</option>
+                                    <option value="BALA">BALA</option>
+                                    <option value="CARTUCHOS">CARTUCHOS</option>
+                                    <option value="CARTUCHOS DE GOMA">CARTUCHOS DE GOMA</option>
+                                </select>
+                                <label for="mun">Tipo de municion</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-4 offset-md-4 text-center">
+                            <button id="btnreg" type="button" class="btn btn-success btn-lg mb-3 misBotones" onclick="guardar()">Registrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            function guardar() {
+                const cliente = {
+                    rut: document.getElementById('txtrut').value,
+                    nombre: document.getElementById('txtnom').value,
+                    apellido: document.getElementById('txtape').value,
+                    telefono: document.getElementById('txttel').value,
+                    email: document.getElementById('txtema').value,
+                    comuna: document.getElementById('cbocom').value,
+                    sexo: document.querySelector('input[name="opsex"]:checked').value,
+                    modelo: document.getElementById('txtmda').value,
+                    precio: document.getElementById('txtpre').value,
+                    cuotas: document.getElementById('cuo').value,
+                    pago: document.querySelector('input[name="oppag"]:checked').value,
+                    municion: document.getElementById('mun').value
+                };
+
+                let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+                clientes.push(cliente);
+                localStorage.setItem('clientes', JSON.stringify(clientes));
+
+                alert('Cliente registrado correctamente');
+            }
+        </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz1yOp0hB1F7bktG8n26pBg+vpbz4AUFFeC2UZp1KBT+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-GLmcnU5lG8FwHBLmdL2eeB8hMVKek8mN0vS54HA6zIc91D73s9I6ePfl3K8Og1mQ" crossorigin="anonymous"></script>
+    <script src="js/validaciones.js"></script>
+  </body>
+</html>
